@@ -21,6 +21,18 @@ def izaberi7(lotobrojevi):
 
     return lotobrojevi
 
+
+mkomb1 = sorted(izaberi7(brojevi))
+mkomb2 = sorted(izaberi7(brojevi))
+mkomb3 = sorted(izaberi7(brojevi))
+mkomb4 = sorted(izaberi7(brojevi))
+mkomb5 = sorted(izaberi7(brojevi))
+mkomb6 = sorted(izaberi7(brojevi))
+mkomb7 = sorted(izaberi7(brojevi))
+mkomb8 = sorted(izaberi7(brojevi))
+
+#print (mkomb1, mkomb2, mkomb3, mkomb4)
+#print (mkomb5, mkomb6, mkomb7, mkomb8)
 brojac1 = 0 
 brojac2 = 0 
 brojac3 = 0 
@@ -30,25 +42,9 @@ brojac6 = 0
 brojac7 = 0 
 brojac8 = 0
 brojizvlacenja = 0
-
-
-
-
-
-
 while (brojac1 or brojac2 or brojac3 or brojac4 or brojac5 or brojac6 or brojac7 or brojac8) < 6:
     brojizvlacenja += 1
     izvucenakombinacija1 = sorted(izaberi7(brojevi))
-
-    mkomb1 = sorted(izaberi7(brojevi))
-    mkomb2 = sorted(izaberi7(brojevi))
-    mkomb3 = sorted(izaberi7(brojevi))
-    mkomb4 = sorted(izaberi7(brojevi))
-    mkomb5 = sorted(izaberi7(brojevi))
-    mkomb6 = sorted(izaberi7(brojevi))
-    mkomb7 = sorted(izaberi7(brojevi))
-    mkomb8 = sorted(izaberi7(brojevi))
-
     istielementi1 = [i for i, j in zip(izvucenakombinacija1, mkomb1) if i == j]
     istielementi2 = [i for i, j in zip(izvucenakombinacija1, mkomb2) if i == j]
     istielementi3 = [i for i, j in zip(izvucenakombinacija1, mkomb3) if i == j]
@@ -67,7 +63,6 @@ while (brojac1 or brojac2 or brojac3 or brojac4 or brojac5 or brojac6 or brojac7
     brojac8 = len(istielementi8)
 
 print (izvucenakombinacija1)
-print (mkomb1, mkomb2, mkomb3, mkomb4)
-print (mkomb5, mkomb6, mkomb7, mkomb8)
+print (mkomb1, mkomb2, mkomb3, mkomb4, mkomb5, mkomb6, mkomb7, mkomb8)
 
 print (brojizvlacenja)
