@@ -5,24 +5,24 @@ brojevi = [0,0,0,0,0,0,0]
 def izaberi7(lotobrojevi):
 
     lotobrojevi = [0,0,0,0,0,0,0]
-    lotobrojevi[0] = random.randrange(1,40,1)
-    j = 0
+    res = [0,0,0,0,0,0,0]
+    
     #print (lotobrojevi)
-    while j < 6:
-        k = 0
-        j += 1
-        #lotobrojevi[i] = 1+random.randint(0,38)
-        lotobrojevi[j] = random.randrange(1,40,1)
-        while lotobrojevi[k] == lotobrojevi[j]:
-        #for k in range(0,j-1):
-            #if lotobrojevi[k] == lotobrojevi[j]:
-            lotobrojevi[k] = random.randrange(1,40,1)
-        k +=1
+    while len(res) > 0:
+        lotobrojevi[0] = random.randrange(1,40,1)
+        lotobrojevi[1] = random.randrange(1,40,1)
+        lotobrojevi[2] = random.randrange(1,40,1)
+        lotobrojevi[3] = random.randrange(1,40,1)
+        lotobrojevi[4] = random.randrange(1,40,1)
+        lotobrojevi[5] = random.randrange(1,40,1)
+        lotobrojevi[6] = random.randrange(1,40,1)
+        res = [idx for idx, val in enumerate(lotobrojevi) if val in lotobrojevi[:idx]] 
+        
+
     return lotobrojevi
 
 s = sorted(izaberi7(brojevi))   
 
-#izvucenakombinacija1 = izaberi7(brojevi)
 mkomb1 = sorted(izaberi7(brojevi))
 mkomb2 = sorted(izaberi7(brojevi))
 mkomb3 = sorted(izaberi7(brojevi))
@@ -43,7 +43,7 @@ brojac6 = 0
 brojac7 = 0 
 brojac8 = 0
 brojizvlacenja = 0
-while (brojac1 or brojac2 or brojac3 or brojac4 or brojac5 or brojac6 or brojac7 or brojac8) < 3:
+while (brojac1 or brojac2 or brojac3 or brojac4 or brojac5 or brojac6 or brojac7 or brojac8) < 6:
     brojizvlacenja += 1
     izvucenakombinacija1 = sorted(izaberi7(brojevi))
     istielementi1 = [i for i, j in zip(izvucenakombinacija1, mkomb1) if i == j]
